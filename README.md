@@ -7,3 +7,37 @@ La cree con el comando
  ```
 
 Reemplaza "com.newlibrary" con tu groupId y "nwelibrary" con tu artifactId.
+
+
+Ejecute en una terminal, parado donde esta el pom:
+
+
+ ```
+mvn clean package
+```
+
+ ```
+mvn install
+```
+
+Se crea el jar del proyecto:
+
+
+<img width="395" alt="Captura de pantalla 2024-12-08 a la(s) 18 42 42" src="https://github.com/user-attachments/assets/14d1686b-d150-465b-bdf2-2f12ceabc980">
+
+
+Y la carpeta .m2/repository/com contiene nuestro proyecto
+
+
+<img width="713" alt="Captura de pantalla 2024-12-08 a la(s) 18 37 51" src="https://github.com/user-attachments/assets/a0fe0554-6b3f-4a1f-a644-6644a501b2f6">
+
+
+
+
+
+
+
+
+
+
+
