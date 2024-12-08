@@ -126,6 +126,17 @@ public class BibliotecaExternaController {
 <img width="433" alt="Captura de pantalla 2024-12-08 a la(s) 20 37 07" src="https://github.com/user-attachments/assets/4216c551-6924-4b32-8647-dbde011edabc">
 
 
+al realizar un GET a /suma
+
+
+<img width="468" alt="Captura de pantalla 2024-12-08 a la(s) 20 24 53" src="https://github.com/user-attachments/assets/7bfbed65-79f5-4838-89c8-fd2d1f045456">
+
+
+
+
+
+
+
 
 
 
