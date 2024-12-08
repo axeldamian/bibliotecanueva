@@ -8,7 +8,7 @@ git pull origen main
  ```
 
 
-La cree con el comando
+Lo cree con el comando
  ```
  mvn archetype:generate -DgroupId=com.newlibrary -DartifactId=newlibrary -Dversion=1.0-SNAPSHOT -DarchetypeArtifactId=maven-archetype-quickstart
  ```
