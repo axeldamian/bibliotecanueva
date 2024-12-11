@@ -1,0 +1,48 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/axelarrondo/newlibrary/newlibrary/src/main/java:/Users/axelarrondo/newlibrary/newlibrary/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/axelarrondo/newlibrary/newlibrary/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'newlibrary 1.0 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' '/Users/axelarrondo/newlibrary/newlibrary/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'newlibrary 1.0 API'
+com.newlibrary.clases
+com.newlibrary
+/Users/axelarrondo/newlibrary/newlibrary/src/main/java = 1733686426561
+/Users/axelarrondo/newlibrary/newlibrary/target/generated-sources/annotations = 1733943444159
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/tag-search-index.js = 1733943447458
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/overview-tree.html = 1733943447441
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/module-search-index.js = 1733943447457
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/index.html = 1733943447444
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/package-search-index.js = 1733943447457
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/jquery-ui.overrides.css = 1733943447502
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/index-all.html = 1733943447471
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/allpackages-index.html = 1733943447456
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/member-search-index.js = 1733943447458
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/copy.svg = 1733943447492
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/script.js = 1733943447491
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/stylesheet.css = 1733943447490
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search-page.js = 1733943447496
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/overview-summary.html = 1733943447477
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/help-doc.html = 1733943447487
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/element-list = 1733943447405
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search.html = 1733943447474
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/allclasses-index.html = 1733943447454
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/type-search-index.js = 1733943447457
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search.js = 1733943447495
