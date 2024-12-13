@@ -272,6 +272,8 @@ mvn clean package javadoc:jar install
 
 Va en ```~/.m2/settings.xml```
 
+Si no está creado, crearlo.
+
 Es un archivo de configuración global para todos los proyectos java maven.
 
 Van las contraseñas de los plugins que las necesiten, no vas a poner la contraseña en el pom, la pueden ver desde github.
@@ -280,9 +282,9 @@ También van repositorio globales que usen todos los proyectos maven.
 
 Por ejemplo GPG usa passphrase, entonces el plugin de GPG va a necesitar la passphrase, va en settings.xml no en el pom.xml del proyecto.
 
-Cambiar donde dice PASSPHRASE DE GPG por la passphrase real.
-
 También se puede meter la passphrase en una variable de entorno o una variable de entorno protegida y el pom.xml del proyecto usa la variable de entorno
+
+Cambiar donde dice PASSPHRASE DE GPG por la passphrase real:
 ```
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
