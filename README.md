@@ -43,10 +43,10 @@ Obviamente .m2 es invible y se ubica en  ~
 
 
 una vez que este en .m2/repository se puede usar agregando en el pom:
-dentro de dependencies:
+dentro de dependencies en otro proyecto:
 
 ```
-	    <dependency>
+	<dependency>
 			<groupId>com.newlibrary</groupId>
 			<artifactId>newlibrary</artifactId>
 			<version>1.0</version>
