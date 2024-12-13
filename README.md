@@ -136,7 +136,7 @@ al realizar un GET a /suma
 <hr />
 
 
-## Publicar proyecto a maven
+## Publicar proyecto a maven central
 
 
 Hay 15 tags que deben ir obligatoriamente
@@ -146,7 +146,7 @@ Son metadatos, es decir, información adicional que acompaña el código
 Por ejemplo, un libro, está su contenido que vendría a ser el código y su autor que es un metadato.
 
 cantidad de etiquetas obligatorias:  15
-dentro de 
+dentro de:
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -172,7 +172,7 @@ dentro de
 
 **url** ---- raíz del pom.xml, dentro de project
 
-**licenses** --- raiz La licencia del proyecto. Debe ser una licencia OSI aprobada
+**licenses** --- raiz del pom.xml, dentro de project, la licencia del proyecto. Debe ser una licencia OSI aprobada
 ejemplo:
 ```
  <licenses>
@@ -266,4 +266,63 @@ fuente: https://maven.apache.org/repository/guide-central-repository-upload.html
 un comando para hacer todo junto puede ser
 ```
 mvn clean package javadoc:jar install
+```
+
+## Archivo settings.xml
+
+Va en de ~/.m2/settings.xml
+
+Es un archivo de configuración global para todos los proyectos java maven.
+
+Van las contraseñas de los plugins que las necesiten, no vas a poner la contraseña en el pom, la pueden ver desde github.
+
+También van repositorio globales que usen todos los proyectos maven.
+
+Por ejemplo GPG usa passphrase, entonces el plugin de GPG va a necesitar la passphrase, va en settings.xml no en el pom.xml del proyecto.
+
+```
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+          http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <profiles>
+    
+    <profile>
+      <id>default</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <name>Maven Central</name>
+          <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+      </repositories>
+    </profile>
+
+    <profile>
+      <id>gpg</id>
+      <properties>
+        <!--<property name="gpg.keyname" value="${gpg.keyname}"/>-->
+        <property name="gpg.passphrase" value="PASSPHRASE DE GPG"/>
+        <!--<property name="gpg.passphrase" value="PASSPHRASE DE GPG"/>-->
+        <!--<property name="gpg.keyname" value="axelarrondo@gmail.com"/>-->
+        <property name="gpg.executable" value="/usr/local/Cellar/gnupg/2.4.6/bin/gpg"/>
+        <property name="gpg.useagent" value="true"/>
+      </properties>
+    </profile>
+  </profiles>
+
+    <servers>
+    <server>
+      <id>gpg.passphrase</id>
+      <passphrase>PONER LA PASSPHRASE DE GPG</passphrase>
+    </server>
+  </servers>
+
+  <activeProfiles>
+    <activeProfile>gpg</activeProfile>
+  </activeProfiles>
+
+
+</settings>
 ```
