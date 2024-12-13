@@ -173,8 +173,18 @@
   
 </build>
 
-<properties>
-  <property name="gpg.executable" value="gpg2"/>
-</properties>
+  <properties>
+    <property name="gpg.executable" value="gpg2"/>
+  </properties>
+
+  <scm />
+  
+  <repositories>
+    <!-- No hay repositorios configurados -->
+  </repositories>
+  
+  <pluginRepositories>
+    <!-- No hay repositorios de plugins configurados -->
+  </pluginRepositories>
 
 </project>
