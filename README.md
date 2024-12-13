@@ -134,7 +134,9 @@ al realizar un GET a /suma
 
 
 <hr />
-## publicar proyecto a maven
+
+
+## Publicar proyecto a maven
 
 
 Hay 15 tags que deben ir obligatoriamente
@@ -154,14 +156,23 @@ dentro de
 </project>
 ```
 
-groupId ---- raiz del pom.xml, dentro de project, ejemplo com.example
-artifactId ---- raíz del pom.xml, dentro de project, nombre del proyecto, va dentro de groupId no en el pom sino en la estructura y tiene que ser único en el grupo
-versión ---- raíz del pom.xml, dentro de project, ejemplo 1.0.0
-packaging: jar, war ---- raíz z del pom.xml, dentro de project, más común el jar que war
-name ---- raíz del pom.xml, dentro de project
-description ---- raíz del pom.xml, dentro de project
-url ---- raíz del pom.xml, dentro de project
-licenses --- raiz La licencia del proyecto. Debe ser una licencia OSI aprobada
+**groupId** ---- raiz del pom.xml, dentro de project, ejemplo com.example
+
+**artifactId** ---- raíz del pom.xml, dentro de project, nombre del proyecto, va dentro del groupId jerarquicamente en maven central
+
+**groupId** no en el pom sino en la estructura y tiene que ser único en el grupo
+
+**version** ---- raíz del pom.xml, dentro de project, ejemplo 1.0.0
+
+**packaging** jar, war ---- raíz del pom.xml, dentro de project, más común el jar que war
+
+**name** ---- raíz del pom.xml, dentro de project
+
+**description** ---- raíz del pom.xml, dentro de project
+
+**url** ---- raíz del pom.xml, dentro de project
+
+**licenses** --- raiz La licencia del proyecto. Debe ser una licencia OSI aprobada
 ejemplo:
 ```
  <licenses>
@@ -172,7 +183,7 @@ ejemplo:
   </licenses>
 ```
 
-scm --- raiz del pom.xml, dentro de project, la información del control de versiones del proyecto (por ejemplo, Git).
+**scm** --- raiz del pom.xml, dentro de project, la información del control de versiones del proyecto (por ejemplo, Git).
 svn u otros
 ejemplo de uso con github:
 ```
@@ -181,7 +192,9 @@ ejemplo de uso con github:
   <developerConnection>scm:git:ssh://github.com/usuario/proyecto.git</developerConnection>
 ```
 
-ejemplo de etiquetas vacías:
+## ejemplo de etiquetas vacías:
+
+
 ```
  <scm />
   
@@ -232,11 +245,20 @@ se puede firmar a mano o usar un plugin en java maven y firma todo automáticame
 
 ## Requisitos para publicar en maven central
 
-**Lanzamientos** : Solo se pueden cargar lanzamientos al Repositorio Central, es decir, archivos que no cambiarán y que solo dependen de otros archivos ya lanzados y disponibles en el repositorio.**
+**Lanzamientos** : Solo se pueden cargar lanzamientos al Repositorio Central, es decir, archivos que no cambiarán y que solo dependen de otros archivos ya lanzados y disponibles en el repositorio.
+
+
 **javadoc y fuentes** para búsqueda en IDE,
+
+
 **Firma PGP** ,
+
+
 **Información mínima de POM** : Existen algunos requisitos para la información mínima en los POM que se encuentran en el Repositorio Central.
+
+
 **coordenadas** : es importante elegir las coordenadas adecuadas para su proyecto. En particular sobre groupId y propiedad del dominio.
+
 
 fuente: https://maven.apache.org/repository/guide-central-repository-upload.html
 
