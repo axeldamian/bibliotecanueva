@@ -57,12 +57,14 @@
   </profiles>
 
   <dependencies>
+
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
     </dependency>
+
   </dependencies>
 
   <build>
@@ -122,25 +124,25 @@
             </configuration>
         </plugin>
 
-<!-- gpg sign -->
-<plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-gpg-plugin</artifactId>
-  <version>3.2.7</version>
-  <executions>
-    <execution>
-      <id>sign-files-for-maven-central</id>
-      <phase>verify</phase>
-      <goals>
-        <goal>sign</goal>
-      </goals>
-      <configuration>
-          <showFiles>true</showFiles>
-          <displayFingerprint>true</displayFingerprint>
-      </configuration>
-    </execution>
-  </executions>
-</plugin>
+        <!-- gpg sign -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>3.2.7</version>
+          <executions>
+            <execution>
+              <id>sign-files-for-maven-central</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+              <configuration>
+                  <showFiles>true</showFiles>
+                  <displayFingerprint>true</displayFingerprint>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
         
     </plugins>
   

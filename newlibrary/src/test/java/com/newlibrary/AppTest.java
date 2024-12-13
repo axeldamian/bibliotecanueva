@@ -1,5 +1,8 @@
 package com.newlibrary;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -34,5 +37,13 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+    }
+
+    @org.junit.Test
+    public void testMain() {
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        App.main(null);
+        assertEquals("Hello World!\n", outContent.toString());
     }
 }
