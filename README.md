@@ -145,6 +145,8 @@ Son metadatos, es decir, información adicional que acompaña el código
 
 Por ejemplo, un libro, está su contenido que vendría a ser el código y su autor que es un metadato.
 
+No dice hacer tests, yo hice con Junit, si no haces tests tu biblioteca no puede ser tomada en serio.
+
 cantidad de etiquetas obligatorias:  15
 dentro de:
 ```
