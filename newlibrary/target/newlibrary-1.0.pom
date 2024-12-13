@@ -96,27 +96,6 @@
           </executions>
         </plugin>
 
-<!--
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>3.0.1</version>
-            <configuration>
-              <gpgArguments>
-                <arg>batch</arg>
-                <arg>yes</arg>
-              </gpgArguments>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        -->
-
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -143,7 +122,6 @@
             </configuration>
         </plugin>
 
-        <!-- gpg sign -->
 <!-- gpg sign -->
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
@@ -151,7 +129,7 @@
   <version>3.2.7</version>
   <executions>
     <execution>
-      <id>sign-custom-file</id>
+      <id>sign-files-for-maven-central</id>
       <phase>verify</phase>
       <goals>
         <goal>sign</goal>
@@ -159,18 +137,6 @@
       <configuration>
           <showFiles>true</showFiles>
           <displayFingerprint>true</displayFingerprint>
-        <files>
-          <file>${project.build.directory}/${project.artifactId}-${project.version}.jar</file>
-          <file>${project.build.directory}/${project.artifactId}-${project.version}.pom</file>
-           <file>${project.build.directory}/${project.artifactId}-${project.version}-sourcesjar</file>
-        </files>
-        <verbose>true</verbose>
-        <includeDefaults>false</includeDefaults>
-        <gpgArguments>
-          <arg>--pinentry-mode</arg>
-          <arg>loopback</arg>
-        </gpgArguments>
-        <passphrase>${gpg.passphrase}</passphrase>
       </configuration>
     </execution>
   </executions>
@@ -179,10 +145,6 @@
     </plugins>
   
 </build>
-
-  <properties>
-    <property name="gpg.executable" value="gpg2"/>
-  </properties>
 
   <scm />
   

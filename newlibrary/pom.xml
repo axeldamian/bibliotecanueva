@@ -123,45 +123,28 @@
         </plugin>
 
         <!-- gpg sign -->
-<!-- gpg sign -->
-<plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-gpg-plugin</artifactId>
-  <version>3.2.7</version>
-  <executions>
-    <execution>
-      <id>sign-custom-file</id>
-      <phase>verify</phase>
-      <goals>
-        <goal>sign</goal>
-      </goals>
-      <configuration>
-          <showFiles>true</showFiles>
-          <displayFingerprint>true</displayFingerprint>
-        <files>
-          <file>${project.build.directory}/${project.artifactId}-${project.version}.jar</file>
-          <file>${project.build.directory}/${project.artifactId}-${project.version}.pom</file>
-           <file>${project.build.directory}/${project.artifactId}-${project.version}-sourcesjar</file>
-        </files>
-        <verbose>true</verbose>
-        <includeDefaults>false</includeDefaults>
-        <gpgArguments>
-          <arg>--pinentry-mode</arg>
-          <arg>loopback</arg>
-        </gpgArguments>
-        <passphrase>${gpg.passphrase}</passphrase>
-      </configuration>
-    </execution>
-  </executions>
-</plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>3.2.7</version>
+          <executions>
+            <execution>
+              <id>sign-files-for-maven-central</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+              <configuration>
+                  <showFiles>true</showFiles>
+                  <displayFingerprint>true</displayFingerprint>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
         
     </plugins>
   
 </build>
-
-  <properties>
-    <property name="gpg.executable" value="gpg2"/>
-  </properties>
 
   <scm />
   
