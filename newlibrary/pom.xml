@@ -82,43 +82,19 @@
           </executions>
         </plugin>
 
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
+          <version>3.2.1</version>
           <executions>
             <execution>
               <id>attach-sources</id>
               <goals>
                 <goal>jar</goal>
               </goals>
-              <configuration>
-                <attach>false</attach>
-              </configuration>
             </execution>
           </executions>
         </plugin>
-
-<!--
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>3.0.1</version>
-            <configuration>
-              <gpgArguments>
-                <arg>batch</arg>
-                <arg>yes</arg>
-              </gpgArguments>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        -->
 
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -147,27 +123,37 @@
         </plugin>
 
         <!-- gpg sign -->
-          <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>3.2.7</version>
-          <executions>
-            <execution>
-              <id>sign-artifacts</id>
-              <phase>install</phase>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-              <configuration>
-                  <file>${project.build.directory}/newlibrary-1.0-sources.jar</file>
-                  <waitForFiles>
-                    <file>${project.build.directory}/newlibrary-1.0-sources.jar</file>
-                  </waitForFiles>
-                <showCommands>true</showCommands>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
+<!-- gpg sign -->
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-gpg-plugin</artifactId>
+  <version>3.2.7</version>
+  <executions>
+    <execution>
+      <id>sign-custom-file</id>
+      <phase>verify</phase>
+      <goals>
+        <goal>sign</goal>
+      </goals>
+      <configuration>
+          <showFiles>true</showFiles>
+          <displayFingerprint>true</displayFingerprint>
+        <files>
+          <file>${project.build.directory}/${project.artifactId}-${project.version}.jar</file>
+          <file>${project.build.directory}/${project.artifactId}-${project.version}.pom</file>
+           <file>${project.build.directory}/${project.artifactId}-${project.version}-sourcesjar</file>
+        </files>
+        <verbose>true</verbose>
+        <includeDefaults>false</includeDefaults>
+        <gpgArguments>
+          <arg>--pinentry-mode</arg>
+          <arg>loopback</arg>
+        </gpgArguments>
+        <passphrase>${gpg.passphrase}</passphrase>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
         
     </plugins>
   

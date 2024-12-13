@@ -1,12 +1,43 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>com.newlibrary</groupId>
   <artifactId>newlibrary</artifactId>
-  <packaging>jar</packaging>
   <version>1.0</version>
+
+  <packaging>jar</packaging>
+
   <name>newlibrary</name>
+
+  <description>
+    Example project to know how to upload to maven central
+  </description>
+
+    <organization>
+    <name>Empresa de ejemplo</name>
+    <url>https://www.ejemplo.com</url>
+  </organization>
+
   <url>http://maven.apache.org</url>
+
+  <!-- Desarrolladores del proyecto -->
+  <developers>
+    <developer>
+      <id>axelarrondo</id>
+      <name>Axel Arrondo</name>
+      <email>axelarrondo@gmail.com</email>
+    </developer>
+  </developers>
+
+
+   <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+
 
     <profiles>
 
@@ -51,19 +82,16 @@
           </executions>
         </plugin>
 
-
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
+          <version>3.2.1</version>
           <executions>
             <execution>
               <id>attach-sources</id>
               <goals>
                 <goal>jar</goal>
               </goals>
-              <configuration>
-                <attach>false</attach>
-              </configuration>
             </execution>
           </executions>
         </plugin>
@@ -116,34 +144,54 @@
         </plugin>
 
         <!-- gpg sign -->
-          <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-gpg-plugin</artifactId>
-          <version>3.2.7</version>
-          <executions>
-            <execution>
-              <id>sign-artifacts</id>
-              <phase>install</phase>
-              <goals>
-                <goal>sign</goal>
-              </goals>
-              <configuration>
-                  <file>${project.build.directory}/newlibrary-1.0-sources.jar</file>
-                  <waitForFiles>
-                    <file>${project.build.directory}/newlibrary-1.0-sources.jar</file>
-                  </waitForFiles>
-                <showCommands>true</showCommands>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
+<!-- gpg sign -->
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-gpg-plugin</artifactId>
+  <version>3.2.7</version>
+  <executions>
+    <execution>
+      <id>sign-custom-file</id>
+      <phase>verify</phase>
+      <goals>
+        <goal>sign</goal>
+      </goals>
+      <configuration>
+          <showFiles>true</showFiles>
+          <displayFingerprint>true</displayFingerprint>
+        <files>
+          <file>${project.build.directory}/${project.artifactId}-${project.version}.jar</file>
+          <file>${project.build.directory}/${project.artifactId}-${project.version}.pom</file>
+           <file>${project.build.directory}/${project.artifactId}-${project.version}-sourcesjar</file>
+        </files>
+        <verbose>true</verbose>
+        <includeDefaults>false</includeDefaults>
+        <gpgArguments>
+          <arg>--pinentry-mode</arg>
+          <arg>loopback</arg>
+        </gpgArguments>
+        <passphrase>${gpg.passphrase}</passphrase>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
         
     </plugins>
   
 </build>
 
-<properties>
-  <property name="gpg.executable" value="gpg2"/>
-</properties>
+  <properties>
+    <property name="gpg.executable" value="gpg2"/>
+  </properties>
+
+  <scm />
+  
+  <repositories>
+    <!-- No hay repositorios configurados -->
+  </repositories>
+  
+  <pluginRepositories>
+    <!-- No hay repositorios de plugins configurados -->
+  </pluginRepositories>
 
 </project>
