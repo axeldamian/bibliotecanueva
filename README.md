@@ -221,7 +221,7 @@ ejemplo de uso con github:
 Es obligatorio firmar: están todos generados en /target, el jar del proyecto, jar que tiene el código fuente, jar de javadoc, pom en target que es una copia del pom original.
 
 GPG es un programa por comandos de terminal, en mac se instala con Homebrew
-no quiero hacer un tutorial sobre gpg, lo único que digo es que nació de pgp y se llama GnuPG.
+no quiero hacer un tutorial sobre gpg, lo único que digo es que nació de pgp y se llama GnuPG, gnu privacy guard, lo hizo Werner Koch y tiene licencia GPL.
 
 
 generar clave pública y privada, para eso gpg pide una passphrase, que es un password pero más largo
@@ -265,8 +265,56 @@ fuente: https://maven.apache.org/repository/guide-central-repository-upload.html
  
 un comando para hacer todo junto puede ser
 ```
-mvn clean package javadoc:jar install
+mvn clean package javadoc:jar verify
 ```
+
+si se ejecutan los comandos por separado tira error, al firmar se tiene que asegurar que antes hace un package, en la misma línea.
+
+## Plugin para crear un jar de los sources
+
+genera newlibrary-1.0-sources.jar dentro de /target
+```
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.2.1</version>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+```
+
+## Plugin de GPG para maven para firmar automáticamente los archivos que necesita maven central
+
+Se ejecuta en la fase "verify" para firmar dentro de /target: el .pom que es una copia del .pom original, el jar del javadoc la documentación, el jar de la aplicación y el sources.jar que contiene los fuentes, son 4 firmas, hacerlas manualmente con gpg se puede, pero es molesto, el código:
+```
+        <!-- gpg sign -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>3.2.7</version>
+          <executions>
+            <execution>
+              <id>sign-files-for-maven-central</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+              <configuration>
+                  <showFiles>true</showFiles>
+                  <displayFingerprint>true</displayFingerprint>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+```
+
+Hay que aclarar que el jar de javadoc y el sources.jar no se pueden ejecutar porque no tienen Main-Class en MANIFEST.mf contenido en el jar.
 
 ## Archivo settings.xml
 
