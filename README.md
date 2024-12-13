@@ -134,14 +134,14 @@ al realizar un GET a /suma
 
 
 <hr />
-# publicar proyecto a maven
+## publicar proyecto a maven
 
 
 Hay 15 tags que deben ir obligatoriamente
 
 Son metadatos, es decir, información adicional que acompaña el código
 
-Por ejemplo, un libro, esta su contenido que vendría a ser el código y su autor que es un metadaro.
+Por ejemplo, un libro, está su contenido que vendría a ser el código y su autor que es un metadato.
 
 cantidad de etiquetas obligatorias:  15
 dentro de 
@@ -161,7 +161,7 @@ packaging: jar, war ---- raíz z del pom.xml, dentro de project, más común el 
 name ---- raíz del pom.xml, dentro de project
 description ---- raíz del pom.xml, dentro de project
 url ---- raíz del pom.xml, dentro de project
-licenses --raiz La licencia del proyecto. Debe ser una licencia OSI aprobada
+licenses --- raiz La licencia del proyecto. Debe ser una licencia OSI aprobada
 ejemplo:
 ```
  <licenses>
@@ -172,7 +172,7 @@ ejemplo:
   </licenses>
 ```
 
-scm --raiz del pom.xml, dentro de project, la información del control de versiones del proyecto (por ejemplo, Git).
+scm --- raiz del pom.xml, dentro de project, la información del control de versiones del proyecto (por ejemplo, Git).
 svn u otros
 ejemplo de uso con github:
 ```
@@ -203,7 +203,45 @@ ejemplo de etiquetas vacías:
     </plugins>
 ```
 
+## firmar archivos con GPG
+
+Es obligatorio firmar: están todos generados en /target, el jar del proyecto, jar que tiene el código fuente, jar de javadoc, pom en target que es una copia del pom original.
+
+GPG es un programa por comandos de terminal, en mac se instala con Homebrew
+no quiero hacer un tutorial sobre gpg, lo único que digo es que nació de pgp y se llama GnuPG.
 
 
+generar clave pública y privada, para eso gpg pide una passphrase, que es un password pero más largo
+```
+gpg --gen-key
+```
 
+firmar un archivo con gpg
+```
+gpg --sign mi-artefacto.jar
+```
 
+Verifica la firma de un archivo utilizando el archivo de firma correspondiente.
+```
+gpg --verify archivo.txt.asc
+```
+
+gpg encripta mensajes usando RSA, un algoritmo que usa números primos grandes, el mensaje es un firma "Nombre Apellido Email"
+
+se puede firmar a mano o usar un plugin en java maven y firma todo automáticamente
+
+## Requisitos para publicar en maven central
+
+**Lanzamientos** : Solo se pueden cargar lanzamientos al Repositorio Central, es decir, archivos que no cambiarán y que solo dependen de otros archivos ya lanzados y disponibles en el repositorio.**
+**javadoc y fuentes** para búsqueda en IDE,
+**Firma PGP** ,
+**Información mínima de POM** : Existen algunos requisitos para la información mínima en los POM que se encuentran en el Repositorio Central.
+**coordenadas** : es importante elegir las coordenadas adecuadas para su proyecto. En particular sobre groupId y propiedad del dominio.
+
+fuente: https://maven.apache.org/repository/guide-central-repository-upload.html
+
+ 
+un comando para hacer todo junto puede ser
+```
+mvn clean package javadoc:jar install
+```
