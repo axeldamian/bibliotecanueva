@@ -133,10 +133,75 @@ al realizar un GET a /suma
 
 
 
+<hr />
+# publicar proyecto a maven
 
 
+Hay 15 tags que deben ir obligatoriamente
 
+Son metadatos, es decir, información adicional que acompaña el código
 
+Por ejemplo, un libro, esta su contenido que vendría a ser el código y su autor que es un metadaro.
+
+cantidad de etiquetas obligatorias:  15
+dentro de 
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	 ...ACA VA...
+</project>
+```
+
+groupId ---- raiz del pom.xml, dentro de project, ejemplo com.example
+artifactId ---- raíz del pom.xml, dentro de project, nombre del proyecto, va dentro de groupId no en el pom sino en la estructura y tiene que ser único en el grupo
+versión ---- raíz del pom.xml, dentro de project, ejemplo 1.0.0
+packaging: jar, war ---- raíz z del pom.xml, dentro de project, más común el jar que war
+name ---- raíz del pom.xml, dentro de project
+description ---- raíz del pom.xml, dentro de project
+url ---- raíz del pom.xml, dentro de project
+licenses --raiz La licencia del proyecto. Debe ser una licencia OSI aprobada
+ejemplo:
+```
+ <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+```
+
+scm --raiz del pom.xml, dentro de project, la información del control de versiones del proyecto (por ejemplo, Git).
+svn u otros
+ejemplo de uso con github:
+```
+<scm>
+  <connection>scm:git:https://github.com/usuario/proyecto.git</connection>
+  <developerConnection>scm:git:ssh://github.com/usuario/proyecto.git</developerConnection>
+```
+
+ejemplo de etiquetas vacías:
+```
+ <scm />
+  
+  <repositories>
+    <!-- No hay repositorios configurados -->
+  </repositories>
+  
+  <pluginRepositories>
+    <!-- No hay repositorios de plugins configurados -->
+  </pluginRepositories>
+  
+  <dependencies>
+    <!-- Dependencias del proyecto -->
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <!-- Plugins del proyecto -->
+    </plugins>
+```
 
 
 
