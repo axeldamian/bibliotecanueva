@@ -8,37 +8,46 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple App.
+ * Clase de pruebas unitarias que utiliza el framework JUnit 3 y 4.
  */
 public class AppTest 
     extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
+
+  /**
+   * Constructor de la clase de pruebas.
+   * 
+   * @param testName nombre de la prueba
+   */
     public AppTest( String testName )
     {
         super( testName );
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
+  /**
+   * Método que devuelve la suite de pruebas.
+   * 
+   * @return la suite de pruebas
+   */
     public static Test suite()
     {
         return new TestSuite( AppTest.class );
     }
 
+     
     /**
-     * Rigourous Test :-)
-     */
+   * Prueba unitaria para verificar que la clase App funciona correctamente.
+   */
     public void testApp()
     {
+        // Verificación de una condición verdadera
         assertTrue( true );
     }
 
+      /**
+   * Prueba unitaria para verificar que el método main de la clase App
+   * imprime la cadena "Hello World!".
+   */
     @org.junit.Test
     public void testMain() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();

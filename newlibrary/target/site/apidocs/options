@@ -1,0 +1,24 @@
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/axelarrondo/newlibrary/newlibrary/src/test/java'
+-subpackages
+com.newlibrary.classes
+-author
+-bottom
+'Copyright &#169; 2024 <a href="https://www.ejemplo.com">Empresa de ejemplo</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/axelarrondo/newlibrary/newlibrary/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'newlibrary 1.0 API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' '/Users/axelarrondo/newlibrary/newlibrary/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'newlibrary 1.0 API'

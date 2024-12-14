@@ -143,6 +143,26 @@
             </execution>
           </executions>
         </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+                <execution>
+                    <id>generate-test-javadoc</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>javadoc</goal>
+                    </goals>
+                    <configuration>
+                        <sourcepath>${project.basedir}/src/test/java</sourcepath>
+                        <subpackages>com.newlibrary.classes</subpackages>
+                        <destination>${project.basedir}/target/site/javadoc-test</destination>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
         
     </plugins>
   
