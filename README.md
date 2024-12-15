@@ -220,6 +220,8 @@ ejemplo de uso con github:
 
 ## firmar archivos con GPG
 
+La documentación dice PGP (no es libre) pero GPG (es libre, es una copia de PGP) sirve para lo mismo.
+
 Es obligatorio firmar: están todos generados en /target, el jar del proyecto, jar que tiene el código fuente, jar de javadoc, pom en target que es una copia del pom original.
 
 GPG es un programa por comandos de terminal, en mac se instala con Homebrew
@@ -318,6 +320,38 @@ Se ejecuta en la fase "verify" para firmar dentro de /target: el .pom que es una
 
 Hay que aclarar que el jar de javadoc y el sources.jar no se pueden ejecutar porque no tienen Main-Class en MANIFEST.mf contenido en el jar.
 
+
+## Plugin para generar jar de las fuentes
+
+No pongan que no sea adjunto.
+```
+            <configuration>
+                <attach>false</attach>
+                <!-- ... -->
+            </configuration>
+```
+Si es no adjunto GPG no lo firma, por defecto es true, así que si no ponen esa opción, su valor es true.
+
+Ejemplo:
+```
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.2.1</version>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+```
+configuration va al mismo nivel que goals.
+
+
+
 ## Archivo settings.xml
 
 Va en ```~/.m2/settings.xml```
@@ -381,3 +415,16 @@ Cambiar donde dice PASSPHRASE DE GPG por la passphrase real:
 
 </settings>
 ```
+
+## Web del proyecto
+
+
+https://leibnix.com/
+
+
+es https, paguen un dominio, hay gratis, pero van a tardar mucho en buscarlo.
+
+
+yo lo hice en https://latincloud.com/
+
+Es un hosting, no arma el HTML, yo sybí una plantilla que encontré en 15 minutos armé la web.
