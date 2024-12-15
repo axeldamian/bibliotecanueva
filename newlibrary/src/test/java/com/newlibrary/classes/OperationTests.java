@@ -1,17 +1,12 @@
 package com.newlibrary.classes;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
-
-import com.newlibrary.clases.Operations;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test class that uses the JUnit 4 framework.
  */
-@RunWith(JUnit4.class)
 public class OperationTests {
 
     /**

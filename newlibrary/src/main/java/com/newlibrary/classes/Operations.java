@@ -1,4 +1,4 @@
-package com.newlibrary.clases;
+package com.newlibrary.classes;
 
     /**
      * Class of operations.

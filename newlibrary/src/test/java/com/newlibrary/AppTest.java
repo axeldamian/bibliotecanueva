@@ -1,54 +1,30 @@
 package com.newlibrary;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.jupiter.api.Test;
 
 /**
- * Clase de pruebas unitarias que utiliza el framework JUnit 3 y 4.
+ * Unit testing class that uses the JUnit 5 framework.
  */
-public class AppTest 
-    extends TestCase
-{
+public class AppTest {
 
-  /**
-   * Constructor de la clase de pruebas.
-   * 
-   * @param testName nombre de la prueba
-   */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-  /**
-   * Método que devuelve la suite de pruebas.
-   * 
-   * @return la suite de pruebas
-   */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-     
     /**
-   * Prueba unitaria para verificar que la clase App funciona correctamente.
-   */
-    public void testApp()
-    {
-        // Verificación de una condición verdadera
-        assertTrue( true );
+     * Unit test to verify that the App class works correctly.
+     */
+    @Test
+    public void testApp() {
+        // Verification of a true condition
+        assertTrue(true);
     }
 
-      /**
-   * Prueba unitaria para verificar que el método main de la clase App
-   * imprime la cadena "Hello World!".
-   */
-    @org.junit.Test
+    /**
+     * Unit test to verify that the main method of the App class prints the string "Hello World!".
+     */
+    @Test
     public void testMain() {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
