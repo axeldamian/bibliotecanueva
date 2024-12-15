@@ -427,4 +427,4 @@ es https, paguen un dominio, hay gratis, pero van a tardar mucho en buscarlo.
 
 yo lo hice en https://latincloud.com/
 
-Es un hosting, no arma el HTML, yo sybí una plantilla que encontré en 15 minutos armé la web.
+Es un hosting, no arma el HTML, yo subí una plantilla que encontré en 15 minutos armé la web.
