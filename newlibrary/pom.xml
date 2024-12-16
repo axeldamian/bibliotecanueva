@@ -2,8 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.newlibrary</groupId>
-  <artifactId>newlibrary</artifactId>
+  <groupId>com.newlibrary92</groupId>
+  <artifactId>newlibrary92</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -168,7 +168,7 @@
                         <addClasspath>true</addClasspath>
                     </manifest>
                     <manifestEntries>
-                        <Main-Class>com.newlibrary.App</Main-Class>
+                        <Main-Class>com.newlibrary92.App</Main-Class>
                     </manifestEntries>
                 </archive>
             </configuration>

@@ -1,4 +1,4 @@
-package com.newlibrary;
+package com.newlibrary92;
 
 import static org.junit.jupiter.api.Assertions.*;
 
