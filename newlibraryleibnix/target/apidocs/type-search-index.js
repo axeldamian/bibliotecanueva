@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.newlibraryleibnix","l":"App"},{"p":"com.newlibraryleibnix.classes","l":"Operations"}];updateSearchResults();

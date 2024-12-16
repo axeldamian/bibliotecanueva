@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.newlibrary","c":"App","l":"App()","u":"%3Cinit%3E()"},{"p":"com.newlibrary","c":"App","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"com.newlibrary.classes","c":"Operations","l":"Operations()","u":"%3Cinit%3E()"},{"p":"com.newlibrary.classes","c":"Operations","l":"sum(int, int)","u":"sum(int,int)"}];updateSearchResults();
