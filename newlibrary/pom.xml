@@ -11,15 +11,15 @@
   <name>newlibrary</name>
 
   <description>
-    Example project to know how to upload to maven central
+    project to know how to upload to maven central.
   </description>
 
     <organization>
-    <name>Empresa de ejemplo</name>
-    <url>https://www.ejemplo.com</url>
+    <name>leibnix</name>
+    <url>https://leibnix.com/</url>
   </organization>
 
-  <url>http://maven.apache.org</url>
+  <url>https://leibnix.com/newlibrary</url>
 
   <!-- Desarrolladores del proyecto -->
   <developers>
@@ -193,12 +193,33 @@
             </execution>
           </executions>
         </plugin>
+
+        <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>0.6.0</version>
+          <extensions>true</extensions>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
+          </configuration>
+        </plugin>
         
     </plugins>
   
 </build>
 
-  <scm />
+<distributionManagement>
+    <repository>
+        <id>ossrh</id>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+</distributionManagement>
+
+  <scm>
+    <connection>scm:git:https://github.com/axeldamian/bibliotecanueva.git</connection>
+    <developerConnection>scm:git:https://github.com/axeldamian/bibliotecanueva.git</developerConnection>
+    <url>https://github.com/axeldamian/bibliotecanueva</url>
+  </scm>
   
   <repositories>
     <!-- No hay repositorios configurados -->
