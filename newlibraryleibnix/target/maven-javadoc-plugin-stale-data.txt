@@ -1,0 +1,48 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'19'
+-sourcepath
+'/Users/axelarrondo/newlibrary/newlibraryleibnix/src/main/java:/Users/axelarrondo/newlibrary/newlibraryleibnix/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2024 <a href="https://leibnix.com/">leibnix</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'newlibrary 1.0 API'
+-use
+-version
+-windowtitle
+'newlibrary 1.0 API'
+com.newlibraryleibnix.classes
+com.newlibraryleibnix
+/Users/axelarrondo/newlibrary/newlibraryleibnix/src/main/java = 1733686426561
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/generated-sources/annotations = 1734381354987
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/tag-search-index.js = 1734381436667
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/overview-tree.html = 1734381436646
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/module-search-index.js = 1734381436665
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/index.html = 1734381436649
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/package-search-index.js = 1734381436665
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/jquery-ui.overrides.css = 1734381436705
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/index-all.html = 1734381436677
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/allpackages-index.html = 1734381436664
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/member-search-index.js = 1734381436667
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/copy.svg = 1734381436694
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/script.js = 1734381436692
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/stylesheet.css = 1734381436691
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/search-page.js = 1734381436699
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/overview-summary.html = 1734381436682
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/help-doc.html = 1734381436689
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/element-list = 1734381436559
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/search.html = 1734381436678
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/allclasses-index.html = 1734381436662
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/type-search-index.js = 1734381436666
+/Users/axelarrondo/newlibrary/newlibraryleibnix/target/apidocs/search.js = 1734381436696
