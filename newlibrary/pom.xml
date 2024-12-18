@@ -40,21 +40,7 @@
 
 
     <profiles>
-
-    <profile>
-      <id>gpg</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <properties>
-        <property name="gpg.passphrase" value="Terrabusi-10"/>
-        <property name="gpg.keyname" value="axelarrondo@gmail.com"/>
-        <property name="gpg.executable" value="/usr/local/Cellar/gnupg/2.4.6/bin/gpg"/>
-        <property name="gpg.useagent" value="false"/>
-      </properties>
-    </profile>
-
-  </profiles>
+    </profiles>
 
   <dependencies>
 
@@ -71,7 +57,6 @@
       <property name="project.build.sourceEncoding" value="UTF-8"/>
       <property name="gpg.executable" value="/usr/local/bin/gpg"/>
       <property name="gpg.keyname" value="axelarrondo@gmail.com"/>
-      <property name="gpg.passphrase" value="Terrabusi-10"/>
   </properties>
 
   <build>
@@ -95,7 +80,6 @@
                 <source>19</source>
                 <target>19</target>
             </configuration>
-            <!-- ... -->
         </plugin>
 
         <plugin>
@@ -103,45 +87,6 @@
             <artifactId>maven-javadoc-plugin</artifactId>
             <version>3.6.0</version>
             <executions>
-            <!--
-                <execution>
-                    <id>generate-test-javadoc</id>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>jar</goal>
-                    </goals>
-                    <configuration>
-                        <sourcepath>${project.basedir}/src/test/java</sourcepath>
-                        <links>
-                            <link>https://junit.org/junit5/docs/current/api/</link>
-                        </links>
-                        <additionalparam>-Xdoclint:none</additionalparam>
-                        <classpathScope>test</classpathScope>
-                        <includeDependencySources>true</includeDependencySources>
-                        <dependencies>
-                            <dependency>
-                                <groupId>org.junit.jupiter</groupId>
-                                <artifactId>junit-jupiter-api</artifactId>
-                                <version>5.9.0</version>
-                                <scope>compile</scope>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.junit.jupiter</groupId>
-                                <artifactId>junit-jupiter-engine</artifactId>
-                                <version>5.9.0</version>
-                                <scope>compile</scope>
-                            </dependency>
-                        </dependencies>
-                        <docletArtifact>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-javadoc-plugin</artifactId>
-                            <version>3.5.0</version>
-                        </docletArtifact>
-                        <docletOptions>
-                            <docletOption>-Xdoclint:none</docletOption>
-                        </docletOptions>
-                    </configuration>
-                </execution>-->
             </executions>
         </plugin>
 
