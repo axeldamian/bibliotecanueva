@@ -17,32 +17,32 @@
 -docencoding
 'UTF-8'
 -doctitle
-'newlibrary 1.0 API'
+'newlibrary 1.1 API'
 -use
 -version
 -windowtitle
-'newlibrary 1.0 API'
+'newlibrary 1.1 API'
 com.newlibrary.classes
 com.newlibrary
 /Users/axelarrondo/newlibrary/newlibrary/src/main/java = 1733686426561
-/Users/axelarrondo/newlibrary/newlibrary/target/generated-sources/annotations = 1734545704628
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/tag-search-index.js = 1734545746498
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/overview-tree.html = 1734545746477
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/module-search-index.js = 1734545746496
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/index.html = 1734545746482
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/package-search-index.js = 1734545746497
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/jquery-ui.overrides.css = 1734545746534
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/index-all.html = 1734545746506
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/allpackages-index.html = 1734545746496
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/member-search-index.js = 1734545746498
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/copy.svg = 1734545746519
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/script.js = 1734545746518
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/stylesheet.css = 1734545746517
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search-page.js = 1734545746523
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/overview-summary.html = 1734545746510
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/help-doc.html = 1734545746515
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/element-list = 1734545746435
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search.html = 1734545746509
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/allclasses-index.html = 1734545746494
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/type-search-index.js = 1734545746497
-/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search.js = 1734545746521
+/Users/axelarrondo/newlibrary/newlibrary/target/generated-sources/annotations = 1734569288038
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/tag-search-index.js = 1734569294801
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/overview-tree.html = 1734569294778
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/module-search-index.js = 1734569294798
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/index.html = 1734569294782
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/package-search-index.js = 1734569294799
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/jquery-ui.overrides.css = 1734569294839
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/index-all.html = 1734569294812
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/allpackages-index.html = 1734569294797
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/member-search-index.js = 1734569294800
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/copy.svg = 1734569294828
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/script.js = 1734569294827
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/stylesheet.css = 1734569294825
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search-page.js = 1734569294831
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/overview-summary.html = 1734569294817
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/help-doc.html = 1734569294823
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/element-list = 1734569294731
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search.html = 1734569294815
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/allclasses-index.html = 1734569294794
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/type-search-index.js = 1734569294800
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search.js = 1734569294830
