@@ -1,0 +1,48 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'19'
+-sourcepath
+'/Users/axelarrondo/newlibrary/newlibrary/src/main/java:/Users/axelarrondo/newlibrary/newlibrary/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2024 <a href="https://leibnix.com/">leibnix</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/axelarrondo/newlibrary/newlibrary/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'newlibrary 1.2 API'
+-use
+-version
+-windowtitle
+'newlibrary 1.2 API'
+com.newlibrary.classes
+com.newlibrary
+/Users/axelarrondo/newlibrary/newlibrary/src/main/java = 1733686426561
+/Users/axelarrondo/newlibrary/newlibrary/target/generated-sources/annotations = 1734829310756
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/tag-search-index.js = 1734832028566
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/overview-tree.html = 1734832028538
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/module-search-index.js = 1734832028563
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/index.html = 1734832028544
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/package-search-index.js = 1734832028564
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/jquery-ui.overrides.css = 1734832028607
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/index-all.html = 1734832028578
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/allpackages-index.html = 1734832028559
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/member-search-index.js = 1734832028565
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/copy.svg = 1734832028594
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/script.js = 1734832028592
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/stylesheet.css = 1734832028591
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search-page.js = 1734832028597
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/overview-summary.html = 1734832028583
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/help-doc.html = 1734832028588
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/element-list = 1734832028490
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search.html = 1734832028581
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/allclasses-index.html = 1734832028555
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/type-search-index.js = 1734832028564
+/Users/axelarrondo/newlibrary/newlibrary/target/apidocs/search.js = 1734832028596

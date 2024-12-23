@@ -1,0 +1,195 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.leibnix</groupId>
+  <artifactId>newlibrary</artifactId>
+  <version>1.2</version>
+
+  <packaging>jar</packaging>
+
+  <name>newlibrary</name>
+
+  <description>
+    project to know how to upload to maven central.
+  </description>
+
+  <organization>
+    <name>leibnix</name>
+    <url>https://leibnix.com/</url>
+  </organization>
+
+  <url>https://leibnix.com/newlibrary</url>
+
+  <!-- Desarrolladores del proyecto -->
+  <developers>
+    <developer>
+      <id>axelarrondo</id>
+      <name>Axel Arrondo</name>
+      <email>axelarrondo@gmail.com</email>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.9.0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <gpg.executable>/usr/local/bin/gpg</gpg.executable>
+    <gpg.keyname>axelarrondo@gmail.com</gpg.keyname>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.6.0</version>
+        <executions>
+          <execution>
+            <id>javadoc</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <source>19</source>
+          <target>19</target>
+        </configuration>
+      </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.2.1</version>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.0</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                    </manifest>
+                    <manifestEntries>
+                        <Main-Class>com.newlibraryleibnix.App</Main-Class>
+                    </manifestEntries>
+                </archive>
+            </configuration>
+        </plugin>
+
+        <!-- gpg sign -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>3.2.7</version>
+          <executions>
+            <execution>
+              <id>sign-files-for-maven-central</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+              <configuration>
+                  <showFiles>true</showFiles>
+                  <displayFingerprint>true</displayFingerprint>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>0.6.0</version>
+          <extensions>true</extensions>
+          <configuration>
+           <serverId>central</serverId>
+            <publishingServerId>central</publishingServerId>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>3.1.0</version>
+          <executions>
+            <execution>
+              <phase>compile</phase>
+              <goals>
+                <goal>run</goal>
+              </goals>
+              <configuration>
+                <target>
+                  <echo message="texto a mostrar en terminal y se muestra el valor de la propiedad example de settongs.xml ${example}"/>
+                </target>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        
+    </plugins>
+  
+</build>
+
+<distributionManagement>
+    <repository>
+        <id>ossrh</id>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+        <id>ossrh</id>
+        <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
+
+  <scm>
+    <connection>scm:git:https://github.com/axeldamian/bibliotecanueva.git</connection>
+    <developerConnection>scm:git:https://github.com/axeldamian/bibliotecanueva.git</developerConnection>
+    <url>https://github.com/axeldamian/bibliotecanueva</url>
+  </scm>
+  
+  <repositories>
+    <!-- No hay repositorios configurados -->
+  </repositories>
+  
+  <pluginRepositories>
+    <!-- No hay repositorios de plugins configurados -->
+  </pluginRepositories>
+
+</project>
